@@ -24,7 +24,7 @@ export const Footer = () => {
                         <div className="social-icon">
                            
                         </div>
-                        <p>Thank you for visiting my portfolio. Always welcome to feedback on improvments! All rights reserved by:  <a href="https://github.com/Sebascrab" target="_blank">  Sebastian Tischner</a></p>
+                        <p>Made by Tommy, Abel, Ryan, and Sebastian <a href="" target="_blank"></a></p>
                     </Col>
                 </Row>
             </Container>
