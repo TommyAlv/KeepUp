@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 // page imports
-import { Home } from './components/Home'
+
+import { Feed } from './components/Feed';
 
 import { Footer } from './components/Footer'
 
@@ -24,11 +25,18 @@ function App() {
 
     <BrowserRouter>
     <div className="App">
-      {/* navbar goes here just like footer */}
+      
         <Routes>
-        <Route path='/home' element={<Home />} />
-        {/* routes to other nav links and pages goes here */}
+          {/* SideNav here*/}
+         
+          {/* Feed */}
+        <Route path='/Feed' element={<Feed />} />
+        {/* right sidebar here */}
+        {/* default home */}
+        <Route path='*' element={<Feed />} />
+        
         </Routes>
+        
         <Footer />
     </div>
     </BrowserRouter>
