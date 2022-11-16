@@ -1,4 +1,5 @@
-
+// Support / Contact Option
+// Copyright Stuff
 
 import { Col, Container, Row } from "react-bootstrap"
 
