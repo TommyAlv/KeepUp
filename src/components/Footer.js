@@ -17,14 +17,12 @@ export const Footer = () => {
         <footer className="footer">
             <Container>
                 <Row className="align-items-center">
-                    <Col size={12} sm={6}>
-                        
-                    </Col>
-                    <Col size={12} sm={6} className="text-center text-sm-end">
+                    
+                    <Col className="text-center text-sm-end">
                         <div className="social-icon">
                            
                         </div>
-                        <p>Made by Tommy, Abel, Ryan, and Sebastian <a href="" target="_blank"></a></p>
+                        <p>Made with love by Tommy, Abel, Ryan, and Sebastian <a href="" target="_blank"></a></p>
                     </Col>
                 </Row>
             </Container>
