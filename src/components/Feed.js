@@ -22,9 +22,11 @@ export const Feed = () => {
         //    header
         <section>
             <Container>
+                <div className='page-banner'>
                 <h2 className='page-title'>Home</h2>
+                </div>
                 <Row className='align-items-center'>
-                    <Col md={8}>
+                    <Col className='scroll' md={6}>
                         <div>
                             <div className='feed-header'>
                                 <h2>Feed</h2>

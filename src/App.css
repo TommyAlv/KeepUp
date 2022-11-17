@@ -2,7 +2,7 @@
 
 .App {
   text-align: center;
-  padding: 30px 100px;
+  padding: 30px 10px;
 }
 
 * {
@@ -11,15 +11,16 @@
   box-sizing: border-box;
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
-}
+} */
 
 body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
+  
   
   /* color: #fff !important; */
   
@@ -29,16 +30,23 @@ body {
 /* -----Home----- */
 
 /* -----Feed----- */
-
+.page-banner {
+  position: -webkit-sticky;
+}
 .page-title {
   size: 100px;
   color: #282c34;
-  padding-bottom: 50px;
-  padding-top: -30px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  background-color: rgba(181, 237, 236, 0.9);
+  border-radius: 10px;
+
   
 }
 
-
+.scroll {
+overflow-y: scroll;
+}
 .feed-header{
   position: ;
   top: 0;
@@ -47,7 +55,7 @@ body {
   border: solid;
   padding: 15px 20px;
   border-radius: 10px;
-  position: sticky;
+  
   border: transparent;
 }
 
@@ -61,8 +69,9 @@ body {
 .post-box {
   padding-bottom: 10px;
   padding-top: ;
-  border-bottom: 8px solid;
+  border: 8px solid;
   border-color: rgba(181, 237, 236, 0.9); 
+  border-top: none;
   padding-right: 10px;
   border-radius: 10px;
   position: sticky;
@@ -84,6 +93,7 @@ body {
   margin-left: 20px;
   font-size: 20px;
   border: none;
+
 }
 
 .post-box-input .avatar {
@@ -142,7 +152,18 @@ body {
 
 
 
+.footer {
+  background-color: rgba(181, 237, 236, 0.9);
+  padding-top: 75px;
+  padding-bottom: 75px;
+  margin-bottom: -50px;
+  margin-top: 50px;
 
+}
+
+.footer p {
+  text-align: center;
+}
 
 
 
