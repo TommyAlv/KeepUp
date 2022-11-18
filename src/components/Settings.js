@@ -15,7 +15,7 @@ export const Settings = () => {
     return (
 
 
-        <section className='h-100'>
+        <section className='vh-100'>
             <div className='page-banner'>
                 <h2 className='Settings'></h2>
             </div>
