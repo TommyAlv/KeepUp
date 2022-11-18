@@ -18,13 +18,13 @@ export const Nbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#">Friends</Nav.Link>
-            <Nav.Link href="#">Settings</Nav.Link>
-            <Nav.Link href="#">Log Out</Nav.Link>
+            <Nav.Link href="/Home">Home</Nav.Link>
+            <Nav.Link href="/Friends">Friends</Nav.Link>
+            <Nav.Link href="/Settings">Settings</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-      <Navbar.Brand id="avatar">Avatar Photo</Navbar.Brand>
+        <Navbar.Brand id="avatar">Avatar Photo</Navbar.Brand>
+        <Nav.Link href="/LogOut">Log Out</Nav.Link>
       </Container>
     </Navbar>
   );
