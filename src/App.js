@@ -35,7 +35,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='App'>
       <Nbar setCurrentPage={ setCurrentPage }/>
 
       {displayPage()}
