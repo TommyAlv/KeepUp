@@ -10,7 +10,7 @@
 // -- ABEL
 
 import React from 'react'
-import { Form } from 'react-bootstrap/lib/Navbar';
+import { Form } from 'react'
 
 function LoginSignUp() {
   return (
@@ -29,6 +29,7 @@ function LoginSignUp() {
             <label htmlFor='password'>Password</label>
             <input type='password' name='password' id='password'/>
         </div>
+        <input type='submit' value='LOGIN'/>
     </form>
   )
 }
