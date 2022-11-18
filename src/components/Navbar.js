@@ -27,7 +27,7 @@ export const Nbar = () => {
           </Nav>
         </Navbar.Collapse>
         <Navbar.Brand id="avatar">Avatar Photo</Navbar.Brand>
-        <Link to="/LogOut">Log Out</Link>
+        <Link to="/LogOut" className='btn'>Log Out</Link>
       </Container>
     </Navbar>
   );
