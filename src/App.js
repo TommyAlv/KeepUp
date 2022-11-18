@@ -2,37 +2,46 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
+import React from 'react';
 
 // page imports
-
 import { Feed } from './components/Feed';
+import { Footer } from './components/Footer';
+import { Nbar } from './components/Navbar';
+import { SignIn } from './components/SignIn';
+import { SignUp } from './components/SignUp';
+import { Friends } from './components/Friends';
+import { Settings } from './components/Settings';
 
-import { Footer } from './components/Footer'
-
-import { Nbar } from './components/Navbar'
 
 
 
 function App() {
+
+  const [currentPage, setCurrentPage] = useState('')
+
+  const displayPage = () => {
+    switch (currentPage) {
+      case "Feed":
+        return <SignIn />;
+      case "Friends":
+        return <Friends />;
+      case "Settings":
+        return <Settings />;
+      default:
+        return <Feed />
+    }
+  }
+
   return (
+    <div>
+      <Nbar setCurrentPage={ setCurrentPage }/>
 
-    <BrowserRouter>
-      <Nbar />
-      <div className="App">
-        <Routes>
-          {/* SideNav here*/}
+      {displayPage()}
 
-          {/* Feed */}
-          <Route path='/Feed' element={<Feed />} />
-          {/* right sidebar here */}
-          {/* default home */}
-          <Route path='*' element={<Feed />} />
-
-        </Routes>
-
-        <Footer />
-      </div>
-    </BrowserRouter>
+      <Footer />
+    </div>
   );
 }
 
