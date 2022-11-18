@@ -9,14 +9,7 @@ import { Feed } from './components/Feed';
 
 import { Footer } from './components/Footer'
 
-
-
-
-
-
-
-
-
+import { Nbar } from './components/Navbar'
 
 
 
@@ -24,21 +17,21 @@ function App() {
   return (
 
     <BrowserRouter>
-    <div className="App">
-      
+      <Nbar />
+      <div className="App">
         <Routes>
           {/* SideNav here*/}
-         
+
           {/* Feed */}
-        <Route path='/Feed' element={<Feed />} />
-        {/* right sidebar here */}
-        {/* default home */}
-        <Route path='*' element={<Feed />} />
-        
+          <Route path='/Feed' element={<Feed />} />
+          {/* right sidebar here */}
+          {/* default home */}
+          <Route path='*' element={<Feed />} />
+
         </Routes>
-        
+
         <Footer />
-    </div>
+      </div>
     </BrowserRouter>
   );
 }

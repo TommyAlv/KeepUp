@@ -20,10 +20,10 @@ import Avatar from 'react-avatar';
 export const Feed = () => {
     return (
         //    header
-        <section>
+        <section className='h-100'>
             <Container>
                 <div className='page-banner'>
-                <h2 className='page-title'>Home</h2>
+                    <h2 className='page-title'>Home</h2>
                 </div>
                 <Row className='align-items-center'>
                     <Col className='scroll' md={6}>
@@ -54,13 +54,13 @@ export const Feed = () => {
                                 <div className='post-header'>
                                     <div className='post-header-text'>
                                         <h3>Sebastian<span>
-                                        <BsCheckCircleFill />
+                                            <BsCheckCircleFill />
                                         </span>
                                         </h3>
                                         <h6>@sebascrab</h6>
                                     </div>
                                     <div className='post-header-description'>
-                                        Wishing I was in Taiwan! 
+                                        Wishing I was in Taiwan!
                                     </div>
                                     <img className='post-image' src={dummyPic1} alt='Taiwan Pic dummy'></img>
                                     <div className='post-footer'>5:26 pm 07/07/22</div>
@@ -75,13 +75,13 @@ export const Feed = () => {
                                 <div className='post-header'>
                                     <div className='post-header-text'>
                                         <h3>Sebastian<span>
-                                        <BsCheckCircleFill />
+                                            <BsCheckCircleFill />
                                         </span>
                                         </h3>
                                         <h6>@sebascrab</h6>
                                     </div>
                                     <div className='post-header-description'>
-                                        What I looked liked when creepying on customers... 
+                                        What I looked liked when creepying on customers...
                                     </div>
                                     <img className='post-image' src={dummyPic2} alt='Taiwan Pic dummy'></img>
                                     <div className='post-footer'>1:02 am 07/07/21</div>
