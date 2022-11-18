@@ -12,7 +12,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 export const Nbar = () => {
   return (
-    <Navbar bg="light" expand="lg" className="mb-3">
+    <Navbar bg="light" expand="lg" className="">
       <Container>
         <Navbar.Brand href="#home">Group Project 3</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
