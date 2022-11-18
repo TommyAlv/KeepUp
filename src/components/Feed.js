@@ -21,12 +21,19 @@ export const Feed = () => {
     return (
         //    header
         <section className='h-100'>
+
+
+            <div className='page-banner'>
+                <h2 className='page-title'>Home</h2>
+            </div>
             <Container>
-                <div className='page-banner'>
-                    <h2 className='page-title'>Home</h2>
-                </div>
+
+
+
                 <Row className='align-items-center'>
-                    <Col className='scroll' md={6}>
+                    <Col md={2}>
+                    </Col>
+                    <Col className='scroll' md={8}>
                         <div>
                             <div className='feed-header'>
                                 <h2>Feed</h2>
@@ -81,7 +88,7 @@ export const Feed = () => {
                                         <h6>@sebascrab</h6>
                                     </div>
                                     <div className='post-header-description'>
-                                        What I looked liked when creepying on customers...
+                                        What I looked liked when creeping on customers...
                                     </div>
                                     <img className='post-image' src={dummyPic2} alt='Taiwan Pic dummy'></img>
                                     <div className='post-footer'>1:02 am 07/07/21</div>
@@ -90,8 +97,7 @@ export const Feed = () => {
                         </div>
 
                     </Col>
-                    <Col md={4}>
-                        {/* advertising */}
+                    <Col md={2}>
                     </Col>
                 </Row>
 
