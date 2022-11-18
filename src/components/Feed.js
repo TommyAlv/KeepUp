@@ -21,15 +21,10 @@ export const Feed = () => {
     return (
         //    header
         <section className='h-100'>
-
-
             <div className='page-banner'>
                 <h2 className='page-title'>Home</h2>
             </div>
             <Container>
-
-
-
                 <Row className='align-items-center'>
                     <Col md={2}>
                     </Col>
@@ -51,7 +46,6 @@ export const Feed = () => {
                                 </form>
                             </div>
                         </div>
-
                         {/* Post */}
                         <div className='post'>
                             <div className='post-avatar'>
@@ -60,7 +54,7 @@ export const Feed = () => {
                             <div className='post-body'>
                                 <div className='post-header'>
                                     <div className='post-header-text'>
-                                        <h3>Sebastian<span>
+                                        <h3>Sebastian Tischner<span>
                                             <BsCheckCircleFill />
                                         </span>
                                         </h3>
@@ -95,12 +89,10 @@ export const Feed = () => {
                                 </div>
                             </div>
                         </div>
-
                     </Col>
                     <Col md={2}>
                     </Col>
                 </Row>
-
             </Container>
         </section>
     )

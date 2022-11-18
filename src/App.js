@@ -28,9 +28,9 @@ function App() {
       case "Friends":
         return <Friends />;
       case "Settings":
-        return <Settings />;
+        return <Feed />;
       default:
-        return <Feed />
+        return <Settings />
     }
   }
 
