@@ -11,7 +11,7 @@ import  Layout  from './components/Layout'
 import { Feed } from './components/Feed';
 import { Footer } from './components/Footer';
 import { Nbar } from './components/Navbar';
-import { SignIn } from './components/SignIn';
+import  SignIn  from './components/SignIn';
 import { SignUp } from './components/SignUp';
 import { Friends } from './components/Friends';
 import { Settings } from './components/Settings';
@@ -35,6 +35,21 @@ function App () {
         <Route path='SignUp' element={<SignUp/>}/>
         <Route path='*' element={<NoPage/>}/>
 
+<<<<<<< HEAD
+  const displayPage = () => {
+    switch (currentPage) {
+      case "Feed":
+        return <SignIn />;
+      case "Friends":
+        return <Friends />;
+      case "Settings":
+        return <Feed />;
+      default:
+        return <Settings />
+    }
+  }
+=======
+>>>>>>> ca19d7ef7d072d105c9c526d85ccc66866385292
 
       </Route>
     </Routes>

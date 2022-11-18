@@ -10,7 +10,7 @@
 // -- ABEL
 
 import React from 'react'
-import { Form } from 'react'
+import { form } from 'react'
 
 function LoginSignUp() {
   return (
