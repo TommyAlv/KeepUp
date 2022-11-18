@@ -8,3 +8,29 @@
 // Password
 
 // -- ABEL
+
+import React from 'react'
+import { Form } from 'react-bootstrap/lib/Navbar';
+
+function LoginSignUp() {
+  return (
+    <form>
+        <div className='form-inner'>
+            <h2>Login</h2>
+            {/* ERROR! */}
+            <label htmlFor='name'>Name</label>
+            <input type='text' name='name' id='name'/>
+        </div>
+        <div className='form-group'>
+            <label htmlFor='email'>Email</label>
+            <input type='email' name='email' id='email'/>
+        </div>
+        <div className='form-group'>
+            <label htmlFor='password'>Password</label>
+            <input type='password' name='password' id='password'/>
+        </div>
+    </form>
+  )
+}
+
+export default LoginSignUp;
