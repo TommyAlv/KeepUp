@@ -31,12 +31,12 @@ export const Nbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav">
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto">
+          <Nav className="ms-auto">
             <Button>
-              <Link to="/Home" className='btn'>Home</Link>
+              <Link to="/Home" className='btn w-30'>Home</Link>
             </Button>
             <Button>
-              <Link to="/Friends" className='btn'>Friends</Link>
+              <Link to="/Friends" className='btn w-30'>Friends</Link>
             </Button>
             <Button>
               <Link to="/Settings" className='btn'>Settings</Link>
