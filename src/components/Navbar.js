@@ -9,6 +9,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
 export const Nbar = () => {
   return (
@@ -18,13 +19,15 @@ export const Nbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <Nav.Link href="/Home">Home</Nav.Link>
-            <Nav.Link href="/Friends">Friends</Nav.Link>
-            <Nav.Link href="/Settings">Settings</Nav.Link>
+            <Link to="/Home" className='btn'>Home</Link>
+            <Link to="/Friends" className='btn'>Friends</Link>
+            <Link to="/Settings" className='btn'>Settings</Link>
+
+
           </Nav>
         </Navbar.Collapse>
         <Navbar.Brand id="avatar">Avatar Photo</Navbar.Brand>
-        <Nav.Link href="/LogOut">Log Out</Nav.Link>
+        <Link to="/LogOut">Log Out</Link>
       </Container>
     </Navbar>
   );
