@@ -11,7 +11,7 @@ import  Layout  from './components/Layout'
 import { Feed } from './components/Feed';
 import { Footer } from './components/Footer';
 import { Nbar } from './components/Navbar';
-import { SignIn } from './components/SignIn';
+import  SignIn  from './components/SignIn';
 import { SignUp } from './components/SignUp';
 import { Friends } from './components/Friends';
 import { Settings } from './components/Settings';
