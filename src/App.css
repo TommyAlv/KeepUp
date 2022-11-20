@@ -40,22 +40,19 @@ body {
   padding-top: 40px;
   background-color: rgba(181, 237, 236, 0.9);
   border-radius: 10px;
+  text-align: center;
 
   
 }
 
-.scroll {
-overflow-y: scroll;
-}
 .feed-header{
-  position: ;
+  text-align: center;
   top: 0;
   background-color: rgba(181, 237, 236, 0.9);
   z-index: 100;
   border: solid;
   padding: 15px 20px;
   border-radius: 10px;
-  
   border: transparent;
 }
 
@@ -113,37 +110,57 @@ overflow-y: scroll;
 
 .post {
   margin-top: 30px;
-  padding-top: 50px;
+  padding-top: 15px;
+  padding-left: 15px;
   border: transparent;
   background-color: rgba(181, 237, 236, 0.9) ;
   border-radius: 10px;
   
 }
 
-.post .post-avatar .avatar-feed {
+.timeline{
+  margin-top: 5%;
+  padding-top: 2%;
+  border-radius: 10px;
+  background-color: rgba(181, 237, 236, 0.9);
+}
+
+.post-user-box {
+  border-bottom: solid;
+  border-color: rgba(24, 42, 41, 0.14);
+  padding-bottom: 2%;
+}
+
+.avatar {
   border: transparent;
   border-radius: 100%;
 }
 
-.post-header-description {
-  font-size: 25px;
-  padding-bottom: 10px;
+.post-user {
+  padding-top: 3%;
 
 }
 
-.post-image {
-  border: transparent;
+.post-output {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+}
+
+.post-output-text {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: rgba(24, 42, 41, 0.14);
   border-radius: 10px;
-  height: 230px;
-  width: auto;
-  
 }
 
-.post-footer {
-  opacity: 70%;
-  text-align: right;
-  padding-right: 20px;
+.post-output-photo {
+  border: transparent;
+  
+  padding-bottom: 3%;
+  padding-left: 3%;
 }
+
 
 
 
