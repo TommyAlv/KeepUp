@@ -39,6 +39,16 @@ module.exports = {
         
     },
 
+    deltePost(req, res) {
+        Post.findOneAndDelete(req.body)
+            .then((post) => !post ? 
+                res.status(404).json({ message: 'No post with that ID!' })
+                    : Post.deleteOne({ _id: { $in: post } })
+                    )
+                    .then(() => res.json({ message: 'Post deleted!' }))
+                    .catch((err) => res.status(500).json(err));
+    },
+
     createComment(req, res) {
         Post.findByIdAndUpdate(req.params.postId, { $addToSet: { comment: req.body } }, { runValidators: true, new: true })
             .then(() => res.json({ message: 'Comment created! '}))
