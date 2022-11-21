@@ -5,9 +5,10 @@
 // -- SEA BASS
 import '../App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Col, Container, Row } from "react-bootstrap"
+import { Button, Col, Container, Row, Dropdown, Form, InputGroup } from "react-bootstrap"
 
 import { BsCheckCircleFill } from "react-icons/bs";
+import { BsFillChatLeftDotsFill } from "react-icons/bs"
 
 import avatarPic from '../assets/images/Sebas-dog.jpeg'
 import dummyPic1 from '../assets/images/Sebas-travel.jpeg'
@@ -53,9 +54,10 @@ export const Feed = () => {
                                     <Avatar className='avatar' src={avatarPic} />
                                 </Col>
                                 <Col className='post-user' md="auto">
-                                    <strong><h3>Sebastian Tischner <BsCheckCircleFill/></h3></strong>
+                                    <strong><h3>Sebastian Tischner <BsCheckCircleFill /></h3></strong>
                                     <h6>@sebascrab</h6>
                                 </Col>
+                                
                             </Row>
                             <Row className='post-output'>
                                 <Col className='post-output-text'>
@@ -64,13 +66,47 @@ export const Feed = () => {
                                 <Col md="auto">
                                 </Col>
                                 <Col xs lg="2">
+                                <p>11/21/22</p>
                                 </Col>
                             </Row>
                             <Row>
-                            <Col>
+                                <Col>
                                     <img className='post-output-photo' src={dummyPic1}></img>
                                 </Col>
                                 <Col md="auto">
+                                </Col>
+                                <Col xs lg="2">
+                                </Col>
+                            </Row>
+                            <Row className='post-comment-box'>
+                                <Col>
+                                    <Dropdown>
+                                        <Dropdown.Toggle variant="info" id="dropdown-basic">
+                                            Comments
+                                        </Dropdown.Toggle>
+
+                                        <Dropdown.Menu>
+                                            <Dropdown.Item>
+                                                <strong>Tommy</strong>
+                                                <p>Nice, have fun!</p>
+                                            </Dropdown.Item>
+                                            <Dropdown.Item>
+                                                <strong>Abel</strong>
+                                                <p>Smh, looks boring tbh!</p>
+                                            </Dropdown.Item>
+                                            <Dropdown.Item>
+                                                <strong>Ryan</strong>
+                                                <p>Where the ladies at..?</p>
+                                            </Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                </Col>
+                                <Col className='comment-display' md="auto">
+                                    <Form>
+                                    <input className='comment-input' placeholder='comment'></input>
+                                    <Button class='comment-submit-btn' type='submit' variant='info' >Submit</Button>
+                                    </Form>
+                                    
                                 </Col>
                                 <Col xs lg="2">
                                 </Col>
