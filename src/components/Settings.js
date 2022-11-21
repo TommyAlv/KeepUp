@@ -3,7 +3,7 @@
 // Login Info Change
 // Delete Account
 // -- SEABASS
-import { Button, Col, Container, Row } from "react-bootstrap"
+import { Button, Col, Container, Row, Card } from "react-bootstrap"
 import '../App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BsCheckCircleFill } from "react-icons/bs";
@@ -17,42 +17,59 @@ export const Settings = () => {
 
         <section className='vh-100'>
             <div className='page-banner'>
-                <h2 className='Settings'></h2>
+                <h1 className='page-title'><strong>Settings</strong></h1>
             </div>
             <Container>
-                <Row className='align-items-center'>
-                    <Col md={2}>
+                <Row>
+                    <Col className="profile">
+                        <div className="profile-header">
+                            <h3><strong>Profile</strong></h3>
+                        </div>
+                        <Card className='profile-card' style={{ width: '20rem' }}>
+                            <Card.Img variant="top" src={avatarPic} />
+                            <Card.Body className='profile-body'>
+                                <Card.Title> <strong><h3>Sebastian Tischner <BsCheckCircleFill /></h3></strong></Card.Title>
+                                <Card.Text>
+                                    <h6>@sebascrab</h6>
+                                </Card.Text>
+                                <Button className="edit-profile-avatar" variant="info">Change Avatar</Button>
+                            </Card.Body>
+                        </Card>
                     </Col>
-                    <Col className='scroll' md={8}>
-                        <div className='profile-card'>
-                            <Avatar className='avatar-feed' src={avatarPic} /><Button id='user-name-btn'  varient='outline-info'>Change Profile Pic </Button>
-                            <h3>Sebastian Tischner<span>
-                                <BsCheckCircleFill /></span></h3>
-                            <h6>@sebascrab</h6>
+                    
+                    
+                    <Col className="edit">
+                        <div className="edit-header">
+                            <h3><strong>Edit Profile</strong></h3>
                         </div>
-                        <div>
-                            <input className="first-name-input" placeholder='Change First Name'></input>
-                        </div>
-                        <Button id='first-name-btn' varient='outline-info'>
-                            submit
-                        </Button>
-                        <div>
-                            <input className="last-name-input" placeholder='Change Last Name'></input>
-                        </div>
-                        <Button id='last-name-btn'  varient='outline-info'>
-                            submit
-                        </Button>
-                        <div>
-                            <input  className="user-name-input" placeholder='Change Username'></input>
-                        </div>
-                        <Button id='user-name-btn'  varient='outline-info'>
-                            submit
-                        </Button>
-                        <div>
-                        </div>
-                        
-                    </Col>
-                    <Col md={2}>
+                        <Row>
+                            <Container className="edit-card" xs={12} md={8}>
+                                <Row >
+                                <Row className="settings-input">
+                                    <strong>Name:</strong>
+                                    <input></input>
+                                </Row>
+                                <Row className="settings-input">
+                                    <strong>Username:</strong>
+                                    <input></input>
+                                </Row>
+                                <Row className="settings-input">
+                                    <strong>Email:</strong>
+                                    <input></input>
+                                </Row>
+                                <Row className="settings-input">
+                                    <strong>Password:</strong>
+                                    <input></input>
+                                </Row>
+                                </Row>
+                            
+                            <Col xs={6} md={4}>
+                            <Col className="settings-btn" xs={6} md={4}>
+                                <Button  variant="info">Submit</Button>
+                            </Col>
+                            </Col>
+                            </Container>
+                        </Row>
                     </Col>
                 </Row>
             </Container>

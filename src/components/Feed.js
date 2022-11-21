@@ -22,7 +22,7 @@ export const Feed = () => {
         //    header
         <section className='h-100'>
             <div className='page-banner'>
-                <h2 className='page-title'>Home</h2>
+                <h1 className='page-title'><strong>Home</strong></h1>
             </div>
             <Container>
                 <Row className='align-items-center'>
