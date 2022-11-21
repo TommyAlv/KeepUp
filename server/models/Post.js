@@ -1,0 +1,85 @@
+
+
+
+const { get } = require('http');
+const { Schema, model, Types } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
+
+
+
+const commentSchema = new Schema(
+    {
+        commentId: {
+            type: Schema.Types.ObjectId,
+            default: () => new Types.ObjectId()
+        },
+
+        postBody: {
+            type: String,
+            required: true,
+            minlength: 1,
+            maxlength: 140,
+        },
+
+        username: {
+            type: String,
+            required: true
+        },
+
+        createdAt: {
+            type: Date,
+            default: Date.now,
+            get: (date) => date.Format(date)
+        }
+    },
+    {
+
+        toJSON: {
+            virtuals: true,
+        },
+        id: false,
+    }
+
+
+);
+
+const postSchema = new Schema(
+    {
+        postSchema: {
+            type: String,
+            required: true,
+            maxlength: 140,
+            minlength: 1
+        },
+
+        createdAt: {
+            type: Date,
+            default: Date.now,
+            get: (date) => dateFormat(date)
+        },
+
+        username: {
+            type: String,
+            required: true
+        },
+
+        comments: [commentSchema]
+    },
+    {
+        toJSON: {
+            virtuals: true,
+          },
+          id: false,
+    }
+);
+
+postSchema 
+.virtual('commentCount'
+.get(function () {
+    return this.comments.lenght;
+
+}));
+
+const Post = model('Post', PostSchema);
+
+module.exports = Post;
