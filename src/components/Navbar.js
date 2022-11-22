@@ -18,7 +18,7 @@ import userPhoto from "../assets/images/land-rover.jpeg"
 
 export const Nbar = () => {
   return (
-    <Navbar bg="light" expand="lg" className="">
+    <Navbar expand="lg" className="" id='navbarbackground'>
       <Container>
         <Navbar.Brand>
           <Link to="/Home" className='btn'>
