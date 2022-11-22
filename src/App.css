@@ -270,9 +270,13 @@ body {
 }
 
 /* ----Sign In---- */
-/* #signInContainer {
-  margin-top: 50%;
-} */
+#signInBackground {
+  background-image: url(https://source.unsplash.com/random/?party);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 /* -----Footer----- */
