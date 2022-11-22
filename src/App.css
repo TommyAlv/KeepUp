@@ -173,8 +173,40 @@ body {
   margin-right: 5px;
 }
 
+/* -----Friends----- */
+
+.friends-header {
+  font-size: 25px;
+  font-weight: 800;
+  color: black;
+  text-align: center;
+  top: 0;
+  background-color: rgba(181, 237, 236, 0.9);
+  z-index: 100;
+  border: solid;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: transparent;
+  margin: 5%;
+}
+
+.friends-box {
+  border-color: rgba(24, 42, 41, 0.14);
+  border: transparent;
+  border-radius: 10px;
+  background-color: rgba(181, 237, 236, 0.9);
+
+}
+
+.friend-profile-item {
+  border-bottom: solid;
+  border-color: rgba(24, 42, 41, 0.14);
+  margin: 1%;
+  padding-top: 4%;
+  padding-bottom: 4%;
 
 
+}
 
 
 
