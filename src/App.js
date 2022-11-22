@@ -13,7 +13,7 @@ import { Footer } from './components/Footer';
 import { Nbar } from './components/Navbar';
 import SignIn from './components/SignIn';
 // import { SignUp } from './components/SignUp';
-// import { Friends } from './components/Friends';
+import { Friends } from './components/Friends';
 import { Settings } from './components/Settings';
 import NoPage from './components/NoPage';
 
@@ -30,7 +30,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<SignIn />} />
-          {/* <Route path='Friends' element={<Friends />} /> */}
+          <Route path='Friends' element={<Friends />} />
           <Route path='Settings' element={<Settings />} />
           <Route path='SignIn' element={<SignIn />} />
           {/* <Route path='SignUp' element={<SignUp />} /> */}
@@ -49,4 +49,18 @@ function App() {
   )
 }
 
+function App() {
+  const adminUser = {
+    email: 'admin@admin.com',
+    password: 'Admin123'
+  }
+
+  const 
+
+  return (
+    <div className='App'>
+
+    </div>
+  )
+}
 export default App;
