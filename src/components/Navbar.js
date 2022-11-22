@@ -22,7 +22,7 @@ export const Nbar = () => {
       <Container>
         <Navbar.Brand>
           <Link to="/Home" className='btn'>
-            Logo
+            KeepUp
           </Link>
         </Navbar.Brand>
         <Navbar.Brand id="avatar">
@@ -41,8 +41,6 @@ export const Nbar = () => {
             <Button>
               <Link to="/Settings" className='btn'>Settings</Link>
             </Button>
-
-
           </Nav>
         </Navbar.Collapse>
         {/* <Link to="/LogOut" className='btn'>Log Out</Link> */}

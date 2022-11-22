@@ -286,20 +286,31 @@ body {
 }
 
 
+/* -----Sign Up----- */
+#signUpBackground {
+  background-image: url(https://source.unsplash.com/random/?wallpaper);
+  background-color: black;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* -----Footer----- */
 
 
 .footer {
   background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
-  padding-top: 75px;
-  padding-bottom: 75px;
+  height: 70px;
   margin-bottom: -50px;
+
   
 
 }
 
 .footer p {
   text-align: center;
+  margin: 0 auto;
 }
 
 
