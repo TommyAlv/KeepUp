@@ -159,6 +159,22 @@ body {
   padding-left: 3%;
 }
 
+.post-comment-box {
+  border-top: solid;
+  border-color: rgba(24, 42, 41, 0.14);
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.comment-input {
+  border: transparent;
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+
+
 
 
 

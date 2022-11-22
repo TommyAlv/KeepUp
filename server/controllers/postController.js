@@ -1,7 +1,7 @@
 
 
 
-const { Post } = require('../models');
+const { Post, User } = require('../models');
 
 
 module.exports = {
@@ -25,8 +25,11 @@ module.exports = {
 
     createPost(req, res) {
         Post.create(req.body)
-            .then((post) => res.json(post))
-            .catch((err) => res.status(500).json(err));
+            .then((thought) => {
+                User.findOneAndUpdate({ username: req.body.username}, { $addToSet: { comments: comment._id }})
+                .then(() => res.json(thought))
+            })
+            .catch((err) => res.status(500).json(err.message));
     },
 
     updatePost(req, res) {
@@ -50,14 +53,14 @@ module.exports = {
     },
 
     createComment(req, res) {
-        Post.findByIdAndUpdate(req.params.postId, { $addToSet: { comment: req.body } }, { runValidators: true, new: true })
+        Post.findByIdAndUpdate(req.params.postId, { $addToSet: { comments: req.body } }, { runValidators: true, new: true })
             .then(() => res.json({ message: 'Comment created! '}))
             .catch((err) => res.status(500).json(err));
 
     },
 
     deleteComment(req, res) {
-        Post.findByIdAndUpdate(req.params.postId, { $pull: { comment: { commentId: req.params.commentId } }}, { runValidators: true, new: true })
+        Post.findByIdAndUpdate(req.params.postId, { $pull: { comments: { commentId: req.params.commentId } }}, { runValidators: true, new: true })
             .then(() => res.json({ message: 'Comment Deleted' }))
             .catch((err) => res.status(500).json(err));
     }
