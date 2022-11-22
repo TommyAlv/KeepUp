@@ -21,14 +21,13 @@ export const Nbar = () => {
     <Navbar expand="lg" className="" id='navbarbackground'>
       <Container>
         <Navbar.Brand>
-          <Link to="/Home" className='btn'>
-            KeepUp
-          </Link>
+          KeepUp
         </Navbar.Brand>
         <Navbar.Brand id="avatar">
           <Avatar alt="User" src={userPhoto} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
+          
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
