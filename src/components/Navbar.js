@@ -27,7 +27,7 @@ export const Nbar = () => {
           <Avatar alt="User" src={userPhoto} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
-          
+          <i class="fa-solid fa-bars"></i>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
