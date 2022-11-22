@@ -9,23 +9,45 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
+import Avatar from '@mui/material/Avatar'
+import Button from '@mui/material/Button'
+import userPhoto from "../assets/images/land-rover.jpeg"
+
+
 
 export const Nbar = () => {
   return (
     <Navbar bg="light" expand="lg" className="">
       <Container>
-        <Navbar.Brand href="#home">Logo</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Brand>
+          <Link to="/Home" className='btn'>
+            Logo
+          </Link>
+        </Navbar.Brand>
+        <Navbar.Brand id="avatar">
+          <Avatar alt="User" src={userPhoto} />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav">
+        </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="m-auto">
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#">Friends</Nav.Link>
-            <Nav.Link href="#">Settings</Nav.Link>
-            <Nav.Link href="#">Log Out</Nav.Link>
+          <Nav className="ms-auto">
+            <Button>
+              <Link to="/Home" className='btn w-30'>Home</Link>
+            </Button>
+            <Button>
+              <Link to="/Friends" className='btn w-30'>Friends</Link>
+            </Button>
+            <Button>
+              <Link to="/Settings" className='btn'>Settings</Link>
+            </Button>
+
+
           </Nav>
         </Navbar.Collapse>
-      <Navbar.Brand id="avatar">Avatar Photo</Navbar.Brand>
+        {/* <Link to="/LogOut" className='btn'>Log Out</Link> */}
       </Container>
     </Navbar>
   );
 }
+
