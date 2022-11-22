@@ -18,11 +18,11 @@ import userPhoto from "../assets/images/land-rover.jpeg"
 
 export const Nbar = () => {
   return (
-    <Navbar bg="light" expand="lg" className="">
+    <Navbar expand="lg" className="" id='navbarbackground'>
       <Container>
         <Navbar.Brand>
           <Link to="/Home" className='btn'>
-            Logo
+            KeepUp
           </Link>
         </Navbar.Brand>
         <Navbar.Brand id="avatar">
@@ -41,8 +41,6 @@ export const Nbar = () => {
             <Button>
               <Link to="/Settings" className='btn'>Settings</Link>
             </Button>
-
-
           </Nav>
         </Navbar.Collapse>
         {/* <Link to="/LogOut" className='btn'>Log Out</Link> */}

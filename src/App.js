@@ -12,7 +12,7 @@ import { Feed } from './components/Feed';
 import { Footer } from './components/Footer';
 import { Nbar } from './components/Navbar';
 import SignIn from './components/SignIn';
-// import { SignUp } from './components/SignUp';
+import SignUp from './components/SignUp';
 import { Friends } from './components/Friends';
 import { Settings } from './components/Settings';
 import NoPage from './components/NoPage';
@@ -33,7 +33,7 @@ function App() {
           <Route path='Friends' element={<Friends />} />
           <Route path='Settings' element={<Settings />} />
           <Route path='SignIn' element={<SignIn />} />
-          {/* <Route path='SignUp' element={<SignUp />} /> */}
+          <Route path='SignUp' element={<SignUp />} />
           <Route path='Home' element={<Feed />} />
           <Route path='*' element={<NoPage />} />
 
