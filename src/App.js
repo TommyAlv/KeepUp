@@ -49,18 +49,4 @@ function App() {
   )
 }
 
-// function App() {
-//   const adminUser = {
-//     email: 'admin@admin.com',
-//     password: 'Admin123'
-//   }
-
-//   const 
-
-//   return (
-//     <div className='App'>
-
-//     </div>
-//   )
-// }
 export default App;

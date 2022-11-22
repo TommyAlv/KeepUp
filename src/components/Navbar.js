@@ -21,9 +21,7 @@ export const Nbar = () => {
     <Navbar expand="lg" className="" id='navbarbackground'>
       <Container>
         <Navbar.Brand>
-          <Link to="/Home" className='btn'>
-            KeepUp
-          </Link>
+          KeepUp
         </Navbar.Brand>
         <Navbar.Brand id="avatar">
           <Avatar alt="User" src={userPhoto} />
