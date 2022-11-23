@@ -5,21 +5,31 @@ const { Schema, model } = require('mongoose');
 
 const userSchema = new Schema({
 
-    name: {
+    firstName: {
         type: String,
         required: 'Must have a name!',
         trim: true,
         minlength: 1,
-        maxlength: 15,
+        maxlength: 25,
         unique: true
     },
+
+    lastName: {
+        type: String,
+        required: 'Must have a name!',
+        trim: true,
+        minlength: 1,
+        maxlength: 25,
+        unique: true
+    },
+
 
     username: {
         type: String,
         require: 'Must have a username!',
         trim: true,
         minlength: 1,
-        maxlength: 10,
+        maxlength: 15,
         unique: true
     },
 
@@ -61,11 +71,11 @@ const userSchema = new Schema({
     }
 );
 
-userSchema 
-.virtual('friendCount'
-.length(function () {
+userSchema
+.virtual('friendCount')
+.get(function () {
     return this.friends.length;
-}));
+});
 
 
 const User = model('User', userSchema);
