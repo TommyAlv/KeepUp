@@ -26,7 +26,7 @@ module.exports = {
     createPost(req, res) {
         Post.create(req.body)
             .then((post) => {
-                User.findOneAndUpdate({ username: req.body.username}, { $addToSet: { comments: comment._id }})
+                User.findOneAndUpdate({ username: req.body.username}, { $addToSet: { posts: post._id }})
                 .then(() => res.json(post))
             })
             .catch((err) => res.status(500).json(err.message));
