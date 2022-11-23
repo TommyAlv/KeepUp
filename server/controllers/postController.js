@@ -25,9 +25,9 @@ module.exports = {
 
     createPost(req, res) {
         Post.create(req.body)
-            .then((thought) => {
+            .then((post) => {
                 User.findOneAndUpdate({ username: req.body.username}, { $addToSet: { comments: comment._id }})
-                .then(() => res.json(thought))
+                .then(() => res.json(post))
             })
             .catch((err) => res.status(500).json(err.message));
     },
@@ -42,7 +42,7 @@ module.exports = {
         
     },
 
-    deltePost(req, res) {
+    deletePost(req, res) {
         Post.findOneAndDelete(req.body)
             .then((post) => !post ? 
                 res.status(404).json({ message: 'No post with that ID!' })

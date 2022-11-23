@@ -10,12 +10,12 @@ const {
     updatePost,
     createComment,
     deleteComment,
-    deltePost,
+    deletePost,
 } = require('../../controllers/postController');
 
 router.route('/').get(getPost).post(createPost);
 
-router.route('/:id').get(getSinglePost).delete(deltePost).put(updatePost);
+router.route('/:id').get(getSinglePost).delete(deletePost).put(updatePost);
 
 router.route('/:postId/comment').post(createComment);
 

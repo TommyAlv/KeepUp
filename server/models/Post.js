@@ -14,7 +14,7 @@ const commentSchema = new Schema(
             default: () => new Types.ObjectId()
         },
 
-        postBody: {
+        commentBody: {
             type: String,
             required: true,
             minlength: 1,
@@ -45,7 +45,7 @@ const commentSchema = new Schema(
 
 const postSchema = new Schema(
     {
-        postSchema: {
+        postText: {
             type: String,
             required: true,
             maxlength: 140,
