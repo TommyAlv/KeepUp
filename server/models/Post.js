@@ -80,6 +80,6 @@ postSchema
 
 });
 
-const Post = model('Post', PostSchema);
+const Post = model('Post', postSchema);
 
 module.exports = Post;

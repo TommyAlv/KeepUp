@@ -32,7 +32,7 @@ export const Friends = () => {
                                                     <Avatar className="avatar" src={avatarPic}></Avatar>
                                                 </Col>
                                                 <Col className="friend-user" md="auto">
-                                                    <strong><h3>Sebastion Tischner</h3></strong>
+                                                    <strong><h3>Sebastian Tischner</h3></strong>
                                                     <h6>@sebascrab</h6>
                                                 </Col>
                                         </Row>
@@ -41,7 +41,7 @@ export const Friends = () => {
                                                     <Avatar className="avatar" src={avatarPic}></Avatar>
                                                 </Col>
                                                 <Col className="friend-user" md="auto">
-                                                    <strong><h3>Sebastion Tischner</h3></strong>
+                                                    <strong><h3>Sebastian Tischner</h3></strong>
                                                     <h6>@sebascrab</h6>
                                                 </Col>
                                         </Row>
@@ -50,7 +50,7 @@ export const Friends = () => {
                                                     <Avatar className="avatar" src={avatarPic}></Avatar>
                                                 </Col>
                                                 <Col className="friend-user" md="auto">
-                                                    <strong><h3>Sebastion Tischner</h3></strong>
+                                                    <strong><h3>Sebastian Tischner</h3></strong>
                                                     <h6>@sebascrab</h6>
                                                 </Col>
                                         </Row>
