@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import userPhoto from "../assets/images/land-rover.jpeg"
+import Logo from "../assets/images/KeepUpLogo.png"
 
 
 
@@ -21,13 +22,13 @@ export const Nbar = () => {
     <Navbar expand="lg" className="" id='navbarbackground'>
       <Container>
         <Navbar.Brand>
-          KeepUp
+          <img src={Logo} className="" id="logoImage" alt='Logo' />
         </Navbar.Brand>
         <Navbar.Brand id="avatar">
           <Avatar alt="User" src={userPhoto} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <i class="fa-solid fa-bars"></i>
+          <i className="fa-solid fa-bars"></i>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
@@ -42,7 +43,6 @@ export const Nbar = () => {
             </Button>
           </Nav>
         </Navbar.Collapse>
-        {/* <Link to="/LogOut" className='btn'>Log Out</Link> */}
       </Container>
     </Navbar>
   );
