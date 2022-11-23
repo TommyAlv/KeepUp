@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from "../assets/images/KeepUpLogo.png"
 import {
     MDBBtn,
     MDBContainer,
@@ -6,32 +7,40 @@ import {
     MDBCardBody,
     MDBInput,
     MDBCheckbox,
-    MDBRow
+    MDBRow,
+    MDBCol
 }
     from 'mdb-react-ui-kit';
 
 function SignUp() {
     return (
         <div>
-
             <MDBContainer fluid className='vh-100' id='signUpBackground'>
                 <MDBRow className='d-flex justify-content-center align-items-center h-100 opacity-9'>
-                    <MDBCard className='m-5 bg-white opacity-95' style={{ maxWidth: '600px' }}>
-                        <MDBCardBody className='px-5'>
-                            <h2 className="text-uppercase text-center mb-5">Create an account</h2>
-                            <MDBInput wrapperClass='mb-4' label='First Name' size='lg' id='form1' type='text' />
-                            <MDBInput wrapperClass='mb-4' label='Last Name' size='lg' id='form1' type='text' />
-                            <MDBInput wrapperClass='mb-4' label='Your Email' size='lg' id='form2' type='email' />
-                            <MDBInput wrapperClass='mb-4' label='Username' size='lg' id='form3' type='text' />
-                            <MDBInput wrapperClass='mb-4' label='Password' size='lg' id='form4' type='password' />
-                            <MDBInput wrapperClass='mb-4' label='Repeat your password' size='lg' id='form5' type='password' />
-                            <div className='d-flex flex-row justify-content-center mb-4'>
-                                <MDBCheckbox name='flexCheck' id='flexCheckDefault' label='I agree all statements in Terms of service' />
-                            </div>
-                            <MDBBtn className='mb-4 w-100 gradient-custom-4' size='lg'>Register</MDBBtn>
-                        </MDBCardBody>
-                    </MDBCard>
+                    <MDBCol col='12'>
+
+                        <MDBCard className='bg-light text-dark my-5 mx-auto' style={{ borderRadius: '1rem', maxWidth: '400px' }}>
+                            <MDBCardBody className='p-5 d-flex flex-column align-items-center mx-auto w-100'>
+                                <img src={Logo} id="logoImageSignUp" />
+                                <h3 className="text-uppercase text-center mb-5">Create an account</h3>
+                                <MDBInput wrapperClass='mb-4' label='First Name' size='lg' id='signUpFirstName' type='text' />
+                                <MDBInput wrapperClass='mb-4' label='Last Name' size='lg' id='signUpLastName' type='text' />
+                                <MDBInput wrapperClass='mb-4' label='Your Email' size='lg' id='signUpEmail' type='email' />
+                                <MDBInput wrapperClass='mb-4' label='Username' size='lg' id='signUpUsername' type='text' />
+                                <MDBInput wrapperClass='mb-4' label='Password' size='lg' id='signUpPassword' type='password' />
+                                <MDBBtn outline className='mx-2 px-5 text-dark-50' color='dark' size='lg'>
+                                    Sign Up
+                                </MDBBtn>
+                                <div>
+                                    <p className="mb-0 mt-5">Already have an account? <a href="/signin" className="text-dark-50 fw-bold">Log In</a></p>
+
+                                </div>
+                            </MDBCardBody>
+                        </MDBCard>
+
+                    </MDBCol>
                 </MDBRow>
+
             </MDBContainer>
         </div>
     );

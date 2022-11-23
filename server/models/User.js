@@ -10,8 +10,7 @@ const userSchema = new Schema({
         required: 'Must have a name!',
         trim: true,
         minlength: 1,
-        maxlength: 25,
-        unique: true
+        maxlength: 25
     },
 
     lastName: {
@@ -19,8 +18,7 @@ const userSchema = new Schema({
         required: 'Must have a name!',
         trim: true,
         minlength: 1,
-        maxlength: 25,
-        unique: true
+        maxlength: 25
     },
 
 
@@ -43,7 +41,6 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: 'Must have a password!',
-        unique: true,
         match: [/^.{4,8}$/]
         // Matches any string between 4 and 8 characters in length. Limits the length of a string. Useful to add to password regular expressions.
     },

@@ -21,7 +21,7 @@ import Avatar from 'react-avatar';
 export const Feed = () => {
     return (
         //    header
-        <section className='h-100'>
+        <section className='vh-100'>
             <div className='page-banner'>
                 <h1 className='page-title'><strong>Home</strong></h1>
             </div>
