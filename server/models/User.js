@@ -1,13 +1,12 @@
-
-
-
 const { Schema, model } = require('mongoose');
+const bcrypt = require('bcrypt');
+
 
 const userSchema = new Schema({
 
     firstName: {
         type: String,
-        required: 'Must have a name!',
+        required: 'Must have a first name!',
         trim: true,
         minlength: 1,
         maxlength: 25
@@ -15,7 +14,7 @@ const userSchema = new Schema({
 
     lastName: {
         type: String,
-        required: 'Must have a name!',
+        required: 'Must have a last name!',
         trim: true,
         minlength: 1,
         maxlength: 25
