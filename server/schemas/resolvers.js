@@ -10,7 +10,7 @@ const resolvers = {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
                     .select("-__v -password")
-                    .populate({ path: "posts", populate: "comments", sort: {createdAt: -1} })
+                    .populate({ path: "posts", populate: "comments" })
                     .populate("friends");
                 return userData;
             }
