@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
-export const Query = gql`
-query Me {
+export const Query_Me = gql`
+{
   me {
     _id
     firstName
@@ -23,7 +23,6 @@ query Me {
       commentCount
     }
     friends {
-      friends {
         _id
         firstName
         lastName
@@ -44,8 +43,8 @@ query Me {
           commentCount
         }
       }
-    }
   }
 }
+
 `
 

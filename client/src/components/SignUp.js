@@ -9,7 +9,6 @@ import {
     MDBCard,
     MDBCardBody,
     MDBInput,
-    MDBCheckbox,
     MDBRow,
     MDBCol
 }
@@ -58,7 +57,7 @@ function SignUp() {
 
                         <MDBCard className='bg-light text-dark my-5 mx-auto' style={{ borderRadius: '1rem', maxWidth: '400px' }}>
                             <MDBCardBody className='p-5 d-flex flex-column align-items-center mx-auto w-100' onSubmit={handleFormSubmit}>
-                                <img src={Logo} id="logoImageSignUp" />
+                                <img src={Logo} id="logoImageSignUp" alt="logo"/>
                                 <h3 className="text-uppercase text-center mb-5">Create an account</h3>
                                 <MDBInput wrapperClass='mb-4' label='First Name' size='lg' id='firstName' name="firstName" type='firstName' value={formState.firstName} onChange={handleChange}/>
                                 <MDBInput wrapperClass='mb-4' label='Last Name' size='lg' id='lastName' name="lastName" type='lastName' value={formState.lastName} onChange={handleChange}/>
