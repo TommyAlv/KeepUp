@@ -9,8 +9,11 @@
 
 // -- ABEL
 
-import React from 'react'
-import Logo from "../assets/images/KeepUpLogo.png"
+import React, { useState } from 'react';
+import { useMutation } from "@apollo/client";
+import { loginUser } from "../utils/mutations";
+import Auth from "../utils/auth";
+import Logo from "../assets/images/KeepUpLogo.png";
 import {
   MDBBtn,
   MDBContainer,
@@ -23,7 +26,37 @@ import {
   from 'mdb-react-ui-kit';
 
 
+
 function SignIn() {
+
+  const [formState, setFormState] = useState({ username: "", password: "" });
+  const [login, { error }] = useMutation(loginUser);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setFormState({ ...formState, [name]: value })
+  }
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault()
+    try {
+      const { data } = await login({
+        variables: { ...formState }
+      })
+      Auth.login(data.login.token)
+
+      document.location.replace("/home")
+    } catch (error) {
+      console.error(error)
+    }
+    setFormState({
+      username: "",
+      password: ""
+
+    })
+  }
+
+
   return (
     <div>
 
@@ -33,20 +66,21 @@ function SignIn() {
           <MDBCol col='12'>
 
             <MDBCard className='bg-dark text-white my-5 mx-auto' style={{ borderRadius: '1rem', maxWidth: '400px' }}>
-              <MDBCardBody className='p-5 d-flex flex-column align-items-center mx-auto w-100'>
-                <img src={ Logo } id="logoImageLogin"/>
+              <MDBCardBody className='p-5 d-flex flex-column align-items-center mx-auto w-100' onSubmit={handleFormSubmit}>
+                <img src={Logo} id="logoImageLogin" />
                 <h3 className="fw-bold mb-2 text-uppercase">Log In</h3>
                 <p className="text-white-50 mb-5 mx-auto text-center">Please enter your Username and Password</p>
 
-                <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' label='Username' id='logInUsername' type='email' size="lg" className='text-white' />
-                <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' label='Password' id='logInPassword' type='password' size="lg" className='text-white' />
+                <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' label='Username' id='username' name="username" type='username' size="lg" className='text-white' value={formState.username} onChange={handleChange} />
+                <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' label='Password' id='password' name="password" type='password' size="lg" className='text-white' value={formState.password} onChange={handleChange} />
 
-                <p className="small mb-3 pb-lg-2"><a className="text-white-50" href="#!">Forgot password?</a></p>
-                <MDBBtn outline className='mx-2 px-5 text-white-50' color='white' size='lg'>
+                <MDBBtn outline className='mx-2 px-5 text-white-50' color='white' size='lg' type='submit' onClick={handleFormSubmit}>
                   Login
                 </MDBBtn>
                 <div>
-                  <p className="mb-0 mt-5">Don't have an account? <a href="/signup" className="text-white-50 fw-bold">Sign Up</a></p>
+                  <p className="mb-0 mt-5">Don't have an account? <a href="/signup" className="text-white-50 fw-bold">
+                    Sign Up
+                  </a></p>
 
                 </div>
               </MDBCardBody>

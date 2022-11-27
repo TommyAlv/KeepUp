@@ -46,7 +46,11 @@ export const Settings = () => {
                             <Container className="edit-card" xs={12} md={8}>
                                 <Row >
                                 <Row className="settings-input">
-                                    <strong>Name:</strong>
+                                    <strong>First Name:</strong>
+                                    <input></input>
+                                </Row>
+                                <Row className="settings-input">
+                                    <strong>Last Name:</strong>
                                     <input></input>
                                 </Row>
                                 <Row className="settings-input">

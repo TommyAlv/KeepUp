@@ -45,15 +45,11 @@ body {
   position: -webkit-sticky;
 }
 .page-title {
-  size: 100px;
+  size: 60px;
   color: #282c34;
-  padding-bottom: 40px;
-  padding-top: 40px;
-  background-color: rgba(181, 237, 236, 0.9);
-  border-radius: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   text-align: center;
-
-  
 }
 
 .feed-header{
@@ -282,7 +278,7 @@ body {
 
 /* ----Sign In---- */
 #signInBackground {
-  background-image: url(https://source.unsplash.com/random/?party);
+  /* background-image: url(https://source.unsplash.com/random/?party); */
   background-color: black;
   height: 100vh;
   background-position: center;
@@ -299,7 +295,7 @@ body {
 
 /* -----Sign Up----- */
 #signUpBackground {
-  background-image: url(https://source.unsplash.com/random/?wallpaper);
+  /* background-image: url(https://source.unsplash.com/random/?wallpaper); */
   background-color: black;
   height: 100vh;
   background-position: center;

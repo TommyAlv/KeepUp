@@ -1,5 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Post, Comment } = require('../models');
+const { findByIdAndUpdate } = require('../models/User');
 const { signToken } = require('../utils/auth');
 
 
@@ -42,6 +43,18 @@ const resolvers = {
             const token = signToken(user);
 
             return { token, user }
+        },
+        updateUser: async (parent, args, context) => {
+            if (context.user) {
+                const user = await User.findByIdAndUpdate(
+                    context.user._id, args, { new: true }
+                )
+                const token = signToken(user);
+
+                return { token, user }
+
+            }
+            throw new AuthenticationError("You're Not Signed In! Get on that.")
         },
         addPost: async (parent, args, context) => {
             if (context.user) {
