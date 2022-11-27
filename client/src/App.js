@@ -8,7 +8,7 @@ import React from 'react';
 
 // page imports
 import Layout from './components/Layout'
-import { Feed } from './components/Feed';
+import { Home } from './components/Home';
 import { Footer } from './components/Footer';
 import { Nbar } from './components/Navbar';
 import SignIn from './components/SignIn';
@@ -34,7 +34,7 @@ function App() {
           <Route path='Settings' element={<Settings />} />
           <Route path='SignIn' element={<SignIn />} />
           <Route path='SignUp' element={<SignUp />} />
-          <Route path='Home' element={<Feed />} />
+          <Route path='Home' element={<Home />} />
           <Route path='*' element={<NoPage />} />
 
 

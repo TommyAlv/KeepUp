@@ -18,6 +18,15 @@ type Post {
     postText: String
     createdAt: String
     username: String
+    comments: [Comment]
+    commentCount: Float
+}
+type Comment {
+    _id: ID
+    postId: String
+    commentBody: String
+    username: String
+    createdAt: String
 }
 type Query {
     me: User
@@ -27,7 +36,12 @@ type Mutation {
     login(username: String!, password: String!): Auth
     addUser(firstName: String!, lastName: String!, username: String!, email: String!, password: String!): Auth
     addPost(postText: String!): Post
+    deletePost(postId: ID): Post
     addFriend(username: String!): User
+    deleteFriend(username: String!): User
+    addComment(postId: ID!, commentBody: String!): Comment
+    deleteComment(commentId: ID!): Comment
+
 }
 `;
 

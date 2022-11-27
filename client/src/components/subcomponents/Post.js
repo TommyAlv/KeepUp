@@ -1,77 +1,40 @@
-// Once Signed in:
-// Feed of posts.
-// Assorted Advertisements. 
-// Emoji Reactions
-// -- SEA BASS
-import '../App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Col, Container, Row, Dropdown, Form, InputGroup } from "react-bootstrap"
+import React from 'react';
 
-import { BsCheckCircleFill } from "react-icons/bs";
-import { BsFillChatLeftDotsFill } from "react-icons/bs"
-
-import avatarPic from '../assets/images/Sebas-dog.jpeg'
-import dummyPic1 from '../assets/images/Sebas-travel.jpeg'
-import dummyPic2 from '../assets/images/land-rover.jpeg'
+import { Button, Col, Container, Row, Dropdown, Form } from "react-bootstrap"
 import Avatar from 'react-avatar';
+import dummyPic1 from '../../assets/images/Sebas-travel.jpeg'
+import avatarPic from '../../assets/images/Sebas-travel.jpeg'
+import { BsCheckCircleFill } from "react-icons/bs";
+export const Post = ({post}) => {
 
 
 
-
-export const Feed = () => {
-    return (
-        //    header
-        <section className='h-100'>
-            <div className='page-banner'>
-                <h1 className='page-title'><strong>Home</strong></h1>
-            </div>
-            <Container>
-                <Row className='align-items-center'>
-                    <Col md={2}>
-                    </Col>
-                    <Col className='scroll' md={8}>
-                        <div>
-                            <div className='feed-header'>
-                                <h2>Feed</h2>
-                            </div>
-                            {/* post */}
-                            <div className='post-box'>
-                                <form>
-                                    <div className='post-box-input'>
-                                        <Avatar className='avatar' src={avatarPic} />
-                                        <input placeholder="What's Happening"></input>
-                                    </div>
-                                    <Button className='post-button' variant="outline-info">
-                                        Post
-                                    </Button>
-                                </form>
-                            </div>
-                        </div>
-                        {/* Post */}
-                        <Container className='timeline'>
+    return(
+        <section>
+            <Container className='timeline'>
                             <Row className='post-user-box'>
                                 <Col xs lg="2">
-                                    <Avatar className='avatar' src={avatarPic} />
+                                    {/* <Avatar className='avatar' src={props.avatarpic} /> */}
                                 </Col>
                                 <Col className='post-user' md="auto">
-                                    <strong><h3>Sebastian Tischner <BsCheckCircleFill /></h3></strong>
-                                    <h6>@sebascrab</h6>
+                                    <strong><h3>{post.user[0].firstName + post.user[0].lastName}<BsCheckCircleFill /></h3></strong>
+                                    <h6>{post.user.username}</h6>
                                 </Col>
                                 
                             </Row>
                             <Row className='post-output'>
                                 <Col className='post-output-text'>
-                                    <h4>Going to be travelling here pretty soon! Can't wait to go back to Taiwan. </h4>
+                                    <h4>{post.postText} </h4>
                                 </Col>
                                 <Col md="auto">
                                 </Col>
                                 <Col xs lg="2">
-                                <p>11/21/22</p>
+                                <p>{post.createdAt}</p>
                                 </Col>
                             </Row>
                             <Row>
                                 <Col>
-                                    <img className='post-output-photo' src={dummyPic1}></img>
+                                    {/* <img className='post-output-photo' src={props.image}></img> */}
                                 </Col>
                                 <Col md="auto">
                                 </Col>
@@ -112,11 +75,6 @@ export const Feed = () => {
                                 </Col>
                             </Row>
                         </Container>
-                    </Col>
-                    <Col md={2}>
-                    </Col>
-                </Row>
-            </Container>
         </section>
     )
 }
