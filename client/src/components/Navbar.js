@@ -14,10 +14,16 @@ import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import userPhoto from "../assets/images/land-rover.jpeg"
 import Logo from "../assets/images/KeepUpLogo.png"
+import Auth from "../utils/auth";
+
 
 
 
 export const Nbar = () => {
+  const logout = (event) => {
+    event.preventDefault()
+    Auth.logout()
+  }
   return (
     <Navbar expand="lg" className="" id='navbarbackground'>
       <Container>
@@ -32,15 +38,34 @@ export const Nbar = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Button>
-              <Link to="/Home" className='btn w-30'>Home</Link>
-            </Button>
-            <Button>
-              <Link to="/Friends" className='btn w-30'>Friends</Link>
-            </Button>
-            <Button>
-              <Link to="/Settings" className='btn'>Settings</Link>
-            </Button>
+            {Auth.loggedIn() ? (
+              <>
+                <Button>
+                  <Link to="/home" className='btn w-30'>Home</Link>
+                </Button>
+                <Button>
+                  <Link to="/friends" className='btn w-30'>Friends</Link>
+                </Button>
+                <Button>
+                  <Link to="/settings" className='btn'>Settings</Link>
+                </Button>
+                <Button>
+                  <a href="/" onClick={logout} className='btn'> Log Out</a>
+                </Button>
+              </>
+
+            ) : (
+              <>
+
+                <Button>
+                  <Link to="/signin" className='btn'>Login</Link>
+                </Button>
+                <Button>
+                  <Link to="/signup" className='btn'>Sign Up</Link>
+                </Button>
+
+              </>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

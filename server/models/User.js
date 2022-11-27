@@ -34,7 +34,7 @@ const userSchema = new Schema({
         type: String,
         required: 'Must have an email!',
         unique: true,
-        match: [/^([A-Za-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/]
+        match: [/.+@.+\..+/, "Must match an email address!"],
     },
 
     password: {
@@ -74,6 +74,12 @@ userSchema
 });
 
 userSchema.pre("save", async function (next){
+    const lowercaseUsername = this.username
+    this.username = lowercaseUsername.toLowerCase()
+    
+    const lowerEmail = this.email
+    this.email = lowerEmail.toLowerCase()
+
     if (this.isNew || this.isModified("password")) {
         const rounds = 10;
         this.password = await bcrypt.hash(this.password, rounds);
